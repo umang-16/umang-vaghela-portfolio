@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umang Vaghela | Software Developer & AI Learner</title>
+    <meta name="description"
+        content="Portfolio of Umang Vaghela — Software Developer, AI Learner, and creative problem solver based in Rajkot, India.">
+    <meta name="keywords" content="Umang Vaghela, Software Developer, AI, Portfolio, Web Developer, Python, Flask">
+    <meta name="author" content="Umang Vaghela">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("ET65fvTcexlf1JQrR"); 
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Premium Cinematic Preloader -->
+    <div id="preloader" class="cinematic-preloader">
+        <div class="preloader-bg"></div>
+        <div class="preloader-content">
+            <div class="preloader-logo-container">
+                <div class="logo-glow"></div>
+                <div class="preloader-logo">Umang<span class="accent">.</span></div>
+            </div>
+            <div class="loading-text-container">
+                <span class="loading-text">Initializing Experience</span>
+                <span class="loading-dots"><span>.</span><span>.</span><span>.</span></span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text" id="progress-text">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="init-hidden">
+        <div class="nav-container">
+            <a href="#home" class="logo">Umang<span class="accent">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <a href="#contact" class="btn btn-nav-cta">Hire Me</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Social Icons -->
+    <div class="floating-socials">
+        <a href="https://www.linkedin.com/in/umang-vaghela-65357a2aa" target="_blank" title="LinkedIn"><i
+                class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/umang-16" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:umangvaghela0706@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section id="home" class="hero section">
+            <div class="hero-bg-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+            <div class="container hero-wrapper">
+                <div class="hero-content">
+                    <div class="hero-tag init-hidden init-hidden">
+                        <span class="pulse-dot"></span>
+                        Available for Work
+                    </div>
+                    <p class="hero-greeting init-hidden init-hidden">Hi there, I'm</p>
+                    <h1 class="hero-name init-hidden init-hidden">Umang Vaghela <span class="wave">👋</span></h1>
+                    <h2 class="hero-title init-hidden init-hidden">Software Developer &amp; AI Learner</h2>
+                    <div class="typing-container init-hidden init-hidden">
+                        <span class="typing-prefix">I build </span><span id="typed"></span>
+                    </div>
+                    <p class="hero-desc init-hidden init-hidden">Passionate about building scalable software and
+                        exploring the potential of
+                        Artificial Intelligence to solve real-world problems.</p>
+                    <div class="hero-cta init-hidden init-hidden">
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+                        <a href="resume.pdf" class="btn btn-outline" download="Umang_Vaghela_Resume.pdf"
+                            id="hero-resume-btn"><i class="fas fa-download"></i> Download CV</a>
+                    </div>
+                    <div class="hero-stats init-hidden init-hidden">
+                        <div class="hstat"><span class="hstat-num">2+</span><span class="hstat-lbl">Projects</span>
+                        </div>
+                        <div class="hstat-divider"></div>
+                        <div class="hstat"><span class="hstat-num">2</span><span class="hstat-lbl">Internships</span>
+                        </div>
+                        <div class="hstat-divider"></div>
+                        <div class="hstat"><span class="hstat-num">4</span><span class="hstat-lbl">Certificates</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image init-hidden">
+                    <div class="image-frame">
+                        <img src="profile.jpg" alt="Umang Vaghela" id="profile-img">
+                        <div class="image-ring"></div>
+                    </div>
+                    <div class="floating-badge badge-1"><i class="fas fa-code"></i> Full Stack</div>
+                    <div class="floating-badge badge-2"><i class="fas fa-brain"></i> AI / ML</div>
+                </div>
+            </div>
+            <div class="scroll-down"><a href="#about"><i class="fas fa-chevron-down"></i></a></div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Who Am I</span>
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <p class="section-subtitle">A passionate developer turning ideas into elegant digital experiences
+                    </p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text glass-panel reveal">
+                        <div class="about-badge"><i class="fas fa-user-astronaut"></i></div>
+                        <h3>Passionate Developer &amp; Problem Solver</h3>
+                        <p>Passionate Software Developer and AI learner with hands-on experience in building real-world
+                            applications. Skilled in web development and machine learning fundamentals, with a strong
+                            focus on developing efficient and scalable solutions.</p>
+                        <p>I thrive in environments that challenge me to learn new technologies and apply them to
+                            complex problems. Whether it's crafting a beautiful frontend or optimizing a backend
+                            database, I am dedicated to delivering high-quality results.</p>
+                        <div class="about-tags">
+                            <span><i class="fas fa-map-marker-alt"></i> Rajkot, India</span>
+                            <span><i class="fas fa-graduation-cap"></i> Atmiya University</span>
+                            <span><i class="fas fa-code"></i> Open to Work</span>
+                        </div>
+                    </div>
+                    <div class="about-stats reveal">
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fas fa-folder-open"></i></div>
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Projects Built</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Internships</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-icon"><i class="fas fa-star"></i></div>
+                            <div class="stat-number">7.30</div>
+                            <div class="stat-label">CGPA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">What I Know</span>
+                    <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                    <p class="section-subtitle">Technologies and tools I work with</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category glass-card reveal">
+                        <h3><i class="fas fa-code"></i> Programming</h3>
+                        <div class="skill-tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">C Programming</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-card reveal">
+                        <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-card reveal">
+                        <h3><i class="fas fa-server"></i> Backend &amp; Frameworks</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">.NET</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-card reveal">
+                        <h3><i class="fas fa-database"></i> Database</h3>
+                        <div class="skill-tags">
+                            <span class="tag">MySQL</span>
+                            <span class="tag">DBMS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-card reveal">
+                        <h3><i class="fas fa-tools"></i> Tools &amp; Other</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">VS Code</span>
+                            <span class="tag">Postman</span>
+                            <span class="tag">Adobe Photoshop</span>
+                            <span class="tag">Android Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">My Work</span>
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                    <p class="section-subtitle">A selection of things I've built recently</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card glass-card reveal">
+                        <div class="project-number">01</div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>AI Resume Screening System</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/umang-16" title="Source Code" aria-label="GitHub"><i
+                                            class="fab fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/posts/umang-vaghela-65357a2aa_ai-machinelearning-nlp-ugcPost-7441392799972962304-aWw3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEp6mh8BwIWa-C5n5PFSWOH62pjjy-gGuTE"
+                                        title="Live Demo" aria-label="Live Demo"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <p class="project-desc">Developed an AI-based system to analyze resumes and match them with
+                                job descriptions using NLP. Generated matching scores for candidate ranking.</p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check-circle"></i> NLP skill extraction</li>
+                                <li><i class="fas fa-check-circle"></i> Resume matching algorithm</li>
+                                <li><i class="fas fa-check-circle"></i> Candidate ranking system</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span>Python</span><span>NLP</span><span>Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card reveal">
+                        <div class="project-number">02</div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Placement Portal</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/umang-16" title="Source Code" aria-label="GitHub"><i
+                                            class="fab fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/posts/umang-vaghela-65357a2aa_finalyearproject-webdevelopment-php-ugcPost-7444056796199223296-6cak?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEp6mh8BwIWa-C5n5PFSWOH62pjjy-gGuTE"
+                                        title="Live Demo" aria-label="Live Demo"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <p class="project-desc">Developed a web-based portal for managing student placements where
+                                students can apply for jobs and track application status while companies can manage
+                                applicants.</p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check-circle"></i> Student dashboard</li>
+                                <li><i class="fas fa-check-circle"></i> Company management panel</li>
+                                <li><i class="fas fa-check-circle"></i> Job application tracking</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE & EDUCATION ===== -->
+        <section id="experience" class="timeline-section section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">My Journey</span>
+                    <h2 class="section-title">Experience &amp; <span class="gradient-text">Education</span></h2>
+                    <p class="section-subtitle">Where I've worked and studied</p>
+                </div>
+                <div class="timeline-grid">
+                    <div class="timeline-column">
+                        <h3 class="timeline-col-title reveal"><i class="fas fa-briefcase"></i> Work Experience</h3>
+                        <div class="timeline">
+                            <div class="timeline-item reveal">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content glass-card">
+                                    <h4>Designing &amp; Image Editing Intern</h4>
+                                    <h5>Bhagyodaya Computers, Rajkot</h5>
+                                    <p>Worked with Adobe Photoshop for designing and image editing tasks.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item reveal">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content glass-card">
+                                    <h4>Data Entry &amp; Record Management Intern</h4>
+                                    <h5>Atmiya University Library, Rajkot</h5>
+                                    <p>Worked on data entry and record management tasks.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-column">
+                        <h3 class="timeline-col-title reveal"><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item reveal">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content glass-card">
+                                    <h4>Diploma In Computer Engineering</h4>
+                                    <h5>Atmiya University</h5>
+                                    <span class="timeline-date"><i class="fas fa-calendar"></i> 2023 – 2026</span>
+                                    <p class="grade"><i class="fas fa-award"></i> CGPA: 7.30 / 10</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CERTIFICATIONS & ACHIEVEMENTS ===== -->
+        <section id="certifications" class="cert-achieve section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Credentials</span>
+                    <h2 class="section-title">Certifications &amp; <span class="gradient-text">Achievements</span></h2>
+                    <p class="section-subtitle">Recognition and continuous learning milestones</p>
+                </div>
+                <div class="grid-2-col">
+                    <div class="certifications glass-card reveal">
+                        <h3 class="card-section-title"><i class="fas fa-certificate"></i> Certifications</h3>
+                        <ul class="styled-list">
+                            <li><i class="fas fa-certificate"></i> Python Programming</li>
+                            <li><i class="fas fa-certificate"></i> Database Management System (DBMS)</li>
+                            <li><i class="fas fa-certificate"></i> Object-Oriented Programming (OOP)</li>
+                            <li><i class="fas fa-certificate"></i> Data Structures &amp; Algorithms (DSA)</li>
+                        </ul>
+                    </div>
+                    <div class="achievements glass-card reveal">
+                        <h3 class="card-section-title"><i class="fas fa-trophy"></i> Achievements</h3>
+                        <ul class="styled-list">
+                            <li><i class="fas fa-trophy"></i> Participated in multiple hackathons</li>
+                            <li><i class="fas fa-star"></i> Strong problem-solving skills</li>
+                            <li><i class="fas fa-users"></i> Team collaboration experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== RESUME ===== -->
+        <section id="resume" class="resume-section section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">My CV</span>
+                    <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
+                    <p class="section-subtitle">Download or view my full resume</p>
+                </div>
+                <div class="resume-card glass-panel reveal">
+                    <div class="resume-left">
+                        <div class="resume-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="resume-info">
+                            <h3>Umang Vaghela</h3>
+                            <p>Software Developer &amp; AI Learner</p>
+                            <span class="resume-tag"><i class="fas fa-graduation-cap"></i> Diploma in Computer
+                                Engineering</span>
+                        </div>
+                    </div>
+                    <div class="resume-actions">
+                        <a href="resume.pdf" class="btn btn-primary" download="Umang_Vaghela_Resume.pdf"
+                            id="download-resume-btn">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                        <a href="resume.pdf" class="btn btn-outline" target="_blank" id="view-resume-btn">
+                            <i class="fas fa-eye"></i> View Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Say Hello</span>
+                    <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                    <p class="section-subtitle">I'm currently looking for new opportunities — let's connect!</p>
+                </div>
+                <div class="contact-wrapper glass-panel reveal">
+                    <div class="contact-info">
+                        <h3>Let's Build Something <span class="gradient-text">Amazing</span></h3>
+                        <p>Whether you have a question, a project idea, or just want to say hi — my inbox is always
+                            open.</p>
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:umangvaghela0706@gmail.com">umangvaghela0706@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon"><i class="fas fa-phone"></i></div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <a href="tel:+919737315302">+91 97373 15302</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <span>Rajkot, Gujarat, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/umang-vaghela-65357a2aa" target="_blank"
+                                class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/umang-16" target="_blank" class="social-btn"
+                                aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="mailto:umangvaghela0706@gmail.com" class="social-btn" aria-label="Email"><i
+                                    class="fas fa-envelope"></i></a>
+                        </div>
+                        
+                        <!-- Google Maps Location -->
+                        <div class="map-container" style="margin-top: 2.5rem; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08);">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118106.70010221665!2d70.7388944926514!3d22.32210265004739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cdf0f%3A0x76dd15cfbe93ad3b!2sRajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" " autocomplete="name">
+                            <label for="name">Your Name</label>
+                            <span class="form-error" id="nameError">Please enter your name</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" " autocomplete="email">
+                            <label for="email">Your Email</label>
+                            <span class="form-error" id="emailError">Please enter a valid email</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" " autocomplete="tel">
+                            <label for="phone">Phone Number (Optional)</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
+                            <label for="subject">Subject</label>
+                            <span class="form-error" id="subjectError">Please enter a subject</span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="form-error" id="messageError">Please enter a message</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                            <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i>
+                                Sending...</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-glow"></div>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">Umang<span class="accent">.</span></a>
+                    <p>Software Developer &amp; AI Learner based in Rajkot, India. Building the future, one line of code
+                        at a time.</p>
+                    <div class="footer-social-row">
+                        <a href="https://www.linkedin.com/in/umang-vaghela-65357a2aa" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/umang-16" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="mailto:umangvaghela0706@gmail.com" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <a href="mailto:umangvaghela0706@gmail.com"><i class="fas fa-envelope"></i>
+                        umangvaghela0706@gmail.com</a>
+                    <a href="tel:+919737315302"><i class="fas fa-phone"></i> +91 97373 15302</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Rajkot, India</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed &amp; Developed with <span class="heart">♥</span> by <span class="gradient-text">Umang
+                        Vaghela</span> &copy; <span id="year"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Back to top -->
+    <button id="back-to-top" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

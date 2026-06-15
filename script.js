@@ -52,10 +52,18 @@ document.addEventListener('DOMContentLoaded', () => {
             // Remove the init-hidden class which just hides opacity initially
             el.classList.remove('init-hidden');
             
+            // Ensure opacity is set to 0 before animation starts
+            el.style.opacity = '0';
+            
             // If it doesn't already have 'reveal', give it an active state manually or let reveal handle it
             // We'll give hero items an explicit slideUp animation
             el.style.animation = `slideUpFade 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards`;
             el.style.animationDelay = `${0.2 + (index * 0.1)}s`;
+            
+            // Ensure visibility after animation
+            setTimeout(() => {
+                el.style.opacity = '1';
+            }, (0.2 + (index * 0.1)) * 1000 + 800);
         });
         
         // Trigger the initial scroll reveal

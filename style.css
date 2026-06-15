@@ -859,6 +859,8 @@ nav.scrolled {
     object-position: center top;
     border-radius: 22px;
     filter: brightness(1.02) saturate(1.05);
+    opacity: 1;
+    display: block;
 }
 
 .image-ring {
@@ -928,7 +930,6 @@ nav.scrolled {
 }
 
 .scroll-down {
-
     position: absolute;
     bottom: 2rem;
     left: 50%;
@@ -1833,6 +1834,11 @@ footer {
    ========================================= */
 .init-hidden {
     opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.init-hidden:not(.init-hidden) {
+    opacity: 1 !important;
 }
 
 .reveal {

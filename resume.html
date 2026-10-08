@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umang Vaghela — Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --accent: #7c3aed;
+            --text: #0f172a;
+            --muted: #475569;
+            --border: #e2e8f0;
+            --bg: #ffffff;
+            --tag-bg: #f1f5f9;
+        }
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: var(--text); font-size: 14px; line-height: 1.6; }
+        .print-bar { position: fixed; top: 0; left: 0; right: 0; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 2rem; z-index: 999; box-shadow: 0 2px 10px rgba(37,99,235,0.3); font-size: 0.9rem; font-weight: 500; }
+        .print-bar .bar-left { display: flex; align-items: center; gap: 0.8rem; }
+        .print-bar a { color: rgba(255,255,255,0.85); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+        .print-bar a:hover { color: #fff; }
+        .print-btn { background: #fff; color: var(--primary); border: none; padding: 0.5rem 1.3rem; border-radius: 8px; font-weight: 600; font-size: 0.875rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; font-family: 'Inter', sans-serif; }
+        .print-btn:hover { background: #eff6ff; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .resume { max-width: 860px; margin: 4.5rem auto 3rem; background: var(--bg); box-shadow: 0 4px 40px rgba(0,0,0,0.1); border-radius: 12px; overflow: hidden; }
+        .header { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #7c3aed 100%); color: #fff; padding: 2.5rem 2.8rem; position: relative; overflow: hidden; }
+        .header::before { content: ''; position: absolute; top: -60px; right: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.06); border-radius: 50%; }
+        .header::after { content: ''; position: absolute; bottom: -40px; left: 40%; width: 160px; height: 160px; background: rgba(255,255,255,0.04); border-radius: 50%; }
+        .header-inner { position: relative; z-index: 1; display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+        .header-name h1 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; margin-bottom: 0.35rem; }
+        .header-name .title { font-size: 1rem; font-weight: 500; opacity: 0.9; letter-spacing: 0.3px; }
+        .header-contacts { display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.82rem; opacity: 0.92; text-align: right; }
+        .header-contacts a { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 0.45rem; justify-content: flex-end; }
+        .header-contacts i { width: 14px; text-align: center; opacity: 0.8; }
+        .body { display: grid; grid-template-columns: 1fr 2.4fr; min-height: 600px; }
+        .sidebar { background: #f8fafc; border-right: 1px solid var(--border); padding: 2rem 1.6rem; display: flex; flex-direction: column; gap: 1.8rem; }
+        .main { padding: 2rem 2.2rem; display: flex; flex-direction: column; gap: 1.8rem; }
+        .section-title { font-family: 'Poppins', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); margin-bottom: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+        .section-title::after { content: ''; flex: 1; height: 1.5px; background: linear-gradient(to right, var(--border), transparent); }
+        .section-title i { font-size: 0.75rem; }
+        .skill-group { margin-bottom: 1rem; }
+        .skill-group:last-child { margin-bottom: 0; }
+        .skill-group-name { font-size: 0.72rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .skill-tag { background: var(--tag-bg); color: var(--text); font-size: 0.75rem; font-weight: 500; padding: 0.22rem 0.6rem; border-radius: 5px; border: 1px solid var(--border); }
+        .skill-tag.primary { background: var(--primary-light); color: var(--primary); border-color: rgba(37,99,235,0.2); }
+        .edu-item { margin-bottom: 0.9rem; }
+        .edu-item:last-child { margin-bottom: 0; }
+        .edu-degree { font-weight: 600; font-size: 0.82rem; color: var(--text); line-height: 1.3; }
+        .edu-school { font-size: 0.77rem; color: var(--primary); font-weight: 500; margin-top: 0.15rem; }
+        .edu-meta { font-size: 0.73rem; color: var(--muted); margin-top: 0.2rem; display: flex; flex-direction: column; gap: 0.1rem; }
+        .edu-badge { display: inline-flex; align-items: center; gap: 0.3rem; background: rgba(16,185,129,0.1); color: #059669; font-size: 0.7rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 4px; margin-top: 0.25rem; }
+        .cert-item { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.55rem; font-size: 0.79rem; color: var(--muted); line-height: 1.3; }
+        .cert-item:last-child { margin-bottom: 0; }
+        .cert-item i { color: var(--accent); margin-top: 2px; font-size: 0.7rem; flex-shrink: 0; }
+        .lang-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.8rem; }
+        .lang-label { color: var(--text); font-weight: 500; }
+        .lang-level { font-size: 0.7rem; color: var(--muted); background: var(--tag-bg); padding: 0.1rem 0.4rem; border-radius: 4px; }
+        .exp-item { padding-bottom: 1.4rem; border-bottom: 1px solid var(--border); }
+        .exp-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.3rem; }
+        .exp-role { font-family: 'Poppins', sans-serif; font-size: 0.92rem; font-weight: 700; color: var(--text); }
+        .exp-date { font-size: 0.73rem; color: var(--muted); white-space: nowrap; background: var(--tag-bg); padding: 0.15rem 0.55rem; border-radius: 4px; font-weight: 500; flex-shrink: 0; }
+        .exp-company { font-size: 0.8rem; color: var(--primary); font-weight: 600; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem; }
+        .exp-company i { font-size: 0.7rem; opacity: 0.7; }
+        .exp-company a { color: var(--primary); text-decoration: none; }
+        .exp-bullets { list-style: none; margin-top: 0.4rem; }
+        .exp-bullets li { font-size: 0.8rem; color: var(--muted); padding: 0.15rem 0; display: flex; align-items: flex-start; gap: 0.4rem; }
+        .exp-bullets li::before { content: '\25b8'; color: var(--primary); font-size: 0.75rem; margin-top: 1px; flex-shrink: 0; }
+        .proj-tech { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.5rem; }
+        .proj-tech span { font-size: 0.7rem; font-weight: 600; color: var(--primary); background: var(--primary-light); border: 1px solid rgba(37,99,235,0.2); padding: 0.15rem 0.5rem; border-radius: 4px; }
+        .summary-text { font-size: 0.83rem; color: var(--muted); line-height: 1.7; border-left: 3px solid var(--primary); padding-left: 1rem; }
+        .achieve-item { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--muted); }
+        .achieve-item:last-child { margin-bottom: 0; }
+        .achieve-item i { color: #f59e0b; font-size: 0.75rem; margin-top: 2px; flex-shrink: 0; }
+        @media print {
+            @page { size: A4; margin: 0.6cm 0.8cm; }
+            body { background: #fff; font-size: 12.5px; }
+            .print-bar { display: none !important; }
+            .resume { margin: 0; box-shadow: none; border-radius: 0; max-width: 100%; }
+            .header { padding: 1.8rem 2rem; }
+            .header-name h1 { font-size: 1.8rem; }
+            .sidebar { padding: 1.4rem 1.3rem; }
+            .main { padding: 1.4rem 1.8rem; }
+            a { color: inherit !important; }
+            .exp-item { page-break-inside: avoid; }
+        }
+        @media (max-width: 680px) {
+            .resume { margin: 4rem 0.8rem 2rem; border-radius: 8px; }
+            .body { grid-template-columns: 1fr; }
+            .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
+            .header-inner { flex-direction: column; }
+            .header-contacts { text-align: left; }
+            .header-contacts a { justify-content: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-bar">
+        <div class="bar-left">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        </div>
+        <button class="print-btn" onclick="window.print()">
+            <i class="fas fa-download"></i> Download / Save as PDF
+        </button>
+    </div>
+
+    <div class="resume">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-inner">
+                <div class="header-name">
+                    <h1>Umang Vaghela</h1>
+                    <div class="title">Software Developer &amp; AI Learner</div>
+                </div>
+                <div class="header-contacts">
+                    <a href="mailto:umangvaghela0706@gmail.com"><i class="fas fa-envelope"></i> umangvaghela0706@gmail.com</a>
+                    <a href="tel:+919737315302"><i class="fas fa-phone"></i> +91 97373 15302</a>
+                    <a href="https://www.linkedin.com/in/umang-vaghela-65357a2aa" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/umang-vaghela-65357a2aa</a>
+                    <a href="https://github.com/umang-16" target="_blank"><i class="fab fa-github"></i> github.com/umang-16</a>
+                    <a><i class="fas fa-map-marker-alt"></i> Rajkot, Gujarat, India</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="body">
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+
+                <div>
+                    <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+                    <div class="edu-item">
+                        <div class="edu-degree">Diploma in Computer Engineering</div>
+                        <div class="edu-school">Atmiya University</div>
+                        <div class="edu-meta"><span>Rajkot, Gujarat</span><span>2023 – 2026</span></div>
+                        <div class="edu-badge"><i class="fas fa-award"></i> CGPA: 7.30 / 10</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="section-title"><i class="fas fa-code"></i> Technical Skills</div>
+                    <div class="skill-group">
+                        <div class="skill-group-name">Programming</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag primary">Python</span>
+                            <span class="skill-tag primary">JavaScript</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">PHP</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-name">Web Development</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag primary">HTML5</span>
+                            <span class="skill-tag primary">CSS3</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">.NET</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-name">AI / ML</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag primary">Machine Learning</span>
+                            <span class="skill-tag primary">NLP</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-name">Database</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">DBMS</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-name">Tools</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="section-title"><i class="fas fa-certificate"></i> Certifications</div>
+                    <div class="cert-item"><i class="fas fa-check-circle"></i> Python Programming</div>
+                    <div class="cert-item"><i class="fas fa-check-circle"></i> Database Management System (DBMS)</div>
+                    <div class="cert-item"><i class="fas fa-check-circle"></i> Object-Oriented Programming (OOP)</div>
+                    <div class="cert-item"><i class="fas fa-check-circle"></i> Data Structures &amp; Algorithms (DSA)</div>
+                </div>
+
+                <div>
+                    <div class="section-title"><i class="fas fa-language"></i> Languages</div>
+                    <div class="lang-item"><span class="lang-label">Gujarati</span><span class="lang-level">Native</span></div>
+                    <div class="lang-item"><span class="lang-label">Hindi</span><span class="lang-level">Fluent</span></div>
+                    <div class="lang-item"><span class="lang-label">English</span><span class="lang-level">Professional</span></div>
+                </div>
+
+            </div>
+
+            <!-- MAIN -->
+            <div class="main">
+
+                <div>
+                    <div class="section-title"><i class="fas fa-user"></i> Professional Summary</div>
+                    <p class="summary-text">
+                        Passionate Software Developer and AI learner with hands-on experience building real-world web and ML applications. Skilled in full-stack web development (HTML, CSS, JavaScript, PHP, Flask) and machine learning fundamentals including NLP. Strong focus on delivering efficient, scalable, and user-friendly solutions. Seeking opportunities to contribute to innovative tech projects and grow as a developer.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="section-title"><i class="fas fa-briefcase"></i> Work Experience</div>
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-role">Designing &amp; Image Editing Intern</div>
+                            <div class="exp-date">2023 – 2024</div>
+                        </div>
+                        <div class="exp-company"><i class="fas fa-building"></i> Bhagyodaya Computers, Rajkot</div>
+                        <ul class="exp-bullets">
+                            <li>Used Adobe Photoshop to create professional designs and edited images for various client projects.</li>
+                            <li>Produced marketing materials, banners, and digital assets meeting client specifications.</li>
+                            <li>Collaborated with the team to ensure timely delivery of high-quality visual outputs.</li>
+                        </ul>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-role">Data Entry &amp; Record Management Intern</div>
+                            <div class="exp-date">2024</div>
+                        </div>
+                        <div class="exp-company"><i class="fas fa-university"></i> Atmiya University Library, Rajkot</div>
+                        <ul class="exp-bullets">
+                            <li>Managed and organised large volumes of library records and digital data entries.</li>
+                            <li>Ensured data accuracy and consistency while maintaining organised filing systems.</li>
+                            <li>Assisted in digitising and cataloguing physical documents into the university system.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="section-title"><i class="fas fa-folder-open"></i> Projects</div>
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-role">AI Resume Screening System</div>
+                            <div class="exp-date">2024</div>
+                        </div>
+                        <div class="exp-company"><i class="fab fa-github"></i><a href="https://github.com/umang-16" target="_blank">github.com/umang-16</a></div>
+                        <ul class="exp-bullets">
+                            <li>Built an AI system that analyses resumes and matches them with job descriptions using NLP techniques.</li>
+                            <li>Implemented skill extraction pipeline and cosine-similarity-based resume-to-JD matching algorithm.</li>
+                            <li>Delivered a candidate ranking system that helps recruiters identify top matches efficiently.</li>
+                        </ul>
+                        <div class="proj-tech"><span>Python</span><span>NLP</span><span>Machine Learning</span><span>Flask</span></div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-header">
+                            <div class="exp-role">Placement Portal</div>
+                            <div class="exp-date">2024</div>
+                        </div>
+                        <div class="exp-company"><i class="fab fa-github"></i><a href="https://github.com/umang-16" target="_blank">github.com/umang-16</a></div>
+                        <ul class="exp-bullets">
+                            <li>Developed a full-stack web portal for university-level student placement management.</li>
+                            <li>Built a student dashboard for job browsing, applications, and real-time status tracking.</li>
+                            <li>Designed a company management panel for posting jobs and reviewing applicants.</li>
+                        </ul>
+                        <div class="proj-tech"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="section-title"><i class="fas fa-trophy"></i> Achievements</div>
+                    <div class="achieve-item"><i class="fas fa-trophy"></i> Participated in multiple hackathons, demonstrating teamwork and rapid prototyping capabilities.</div>
+                    <div class="achieve-item"><i class="fas fa-star"></i> Maintained strong academic performance with CGPA 7.30/10 at Atmiya University.</div>
+                    <div class="achieve-item"><i class="fas fa-users"></i> Demonstrated effective team collaboration across internships and academic projects.</div>
+                    <div class="achieve-item"><i class="fas fa-robot"></i> Self-taught AI/ML and NLP skills beyond the standard diploma curriculum.</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
